@@ -1,24 +1,58 @@
 import React from 'react';
 import SearchPresenter from './SearchPresenter';
+import { tvApi, moviesApi } from '../../api';
 
-export default class extends React.Component{
-    state={
-        topRated:null,
-        popular:null,
-        airingToday:null,
-        error:null,
-        loading:true
+export default class extends React.Component {
+    state = {
+        movieResults: null,
+        tvResults: null,
+        searchTerm: '',
+        error: null,
+        loading: false
+    };
+    componentDidMount(){
+        this.hansdleSubmit();
     }
-    render(){
-        const {topRated,popular,airingToday,error,loading} = this.state;
-        return(
-            <SearchPresenter 
-            topRated={topRated}
-            popular={popular}
-            airingToday={airingToday}
-            error={error}
-            loading={loading} />
+    hansdleSubmit = () => {
+        const {searchTerm} = this.state;
+        if(searchTerm!==''){
+            this.searchByTerm();
+        }
+    };
+    searchByTerm = async() => {
+        const {searchTerm} = this.state;
+        try{
+            this.setState({
+                loading: true
+            })
+            const {data:{results:movieResults}} = await moviesApi.search(searchTerm);
+            const {data:{results:tvResults}} = await tvApi.search(searchTerm);
+            this.setState({
+                movieResults,tvResults
+            })
+        }catch{
+            this.setState({
+                error:"Can't find results "
+            })
+        }
+        finally{
+            this.setState({
+                loading:false
+            })
+        }
+    };
+    render() {
+        const {movieResults,tvResults,searchTerm,error,loading} = this.state;
+        return (
+            <SearchPresenter
+                topmovieResultsRated={movieResults}
+                tvResults={tvResults}
+                searchTerm={searchTerm}
+                error={error}
+                loading={loading} 
+                hansdleSubmit={this.hansdleSubmit}
+            />
         )
-        
+
     }
 }

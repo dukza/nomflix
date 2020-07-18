@@ -15,7 +15,7 @@ const NavItem = styled(Link)`
     align-items:center;
     transition:border-bottom .6s ease-in-out;
 `;
- 
+// withRouter: 라우터의 위치를 알고 있다
 export default withRouter(({location:{pathname}}) => (
     <header className="col-12">
         {/* {console.log(props)} */}

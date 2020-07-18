@@ -4,7 +4,7 @@
 body {
   font-family: "SF Display";
   font-weight: 400;
-  background-color: #2c2c2c;
+  background-color: #1C1C1C;
   color: #808080;
   -webkit-transition: background-color 1s;
   transition: background-color 1s;
@@ -147,7 +147,7 @@ body {
 }
 
 .text-darkgray {
-  color: #2c2c2c;
+  color: #1C1C1C;
 }
 
 .font-weight-bold {
@@ -411,19 +411,19 @@ body {
 }
 
 .bg-darkgray-60 {
-  background-color: rgba(44, 44, 44, 0.4);
+  background-color: rgba(28, 28, 28, 0.4);
 }
 
 .bg-darkgray-20 {
-  background-color: rgba(44, 44, 44, 0.8);
+  background-color: rgba(28, 28, 28, 0.8);
 }
 
 .bg-darkgray-40 {
-  background-color: rgba(44, 44, 44, 0.6);
+  background-color: rgba(28, 28, 28, 0.6);
 }
 
 .bg-darkgray {
-  background-color: #2c2c2c;
+  background-color: #1C1C1C;
 }
 
 .bg-brand-blue {
