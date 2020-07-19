@@ -40,7 +40,6 @@ export default class extends React.Component{
             popular={popular}
             error={error}
             loading={loading} />
-        )
-        
+        ) 
     }
 }

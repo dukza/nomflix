@@ -13,6 +13,7 @@ export default class extends React.Component{
     async componentDidMount(){
         try{
             const {data:{results:topRated}} =  await tvApi.topRated();
+            console.log(topRated)
             const {data:{results:popular}} =  await tvApi.popular();
             const {data:{results:airingToday}} =  await tvApi.airingToday();
             this.setState({
