@@ -11,14 +11,22 @@ export default class extends React.Component {
         loading: false
     };
     componentDidMount(){
-        this.hansdleSubmit();
+        this.handleSubmit();
     }
-    hansdleSubmit = () => {
-        const {searchTerm} = this.state;
-        if(searchTerm!==''){
-            this.searchByTerm();
+    handleSubmit = () => {
+        // event.preventDefault();
+        const { searchTerm } = this.state;
+        if (searchTerm !== "") {
+          this.searchByTerm();
         }
-    };
+      };
+    updateTerm = (event) => {
+        const {target:{ value }} = event;
+        console.log(value)
+        this.setState({
+            searchTerm:value
+        })
+    }
     searchByTerm = async() => {
         const {searchTerm} = this.state;
         try{
@@ -45,12 +53,13 @@ export default class extends React.Component {
         const {movieResults,tvResults,searchTerm,error,loading} = this.state;
         return (
             <SearchPresenter
-                topmovieResultsRated={movieResults}
+                movieResults={movieResults}
                 tvResults={tvResults}
                 searchTerm={searchTerm}
                 error={error}
                 loading={loading} 
-                hansdleSubmit={this.hansdleSubmit}
+                handleSubmit={this.handleSubmit}
+                updateTerm={this.updateTerm}
             />
         )
 

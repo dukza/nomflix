@@ -31,3 +31,7 @@ https://nomadcoders.co/react-for-beginners/lectures/519?wvideo=wkizsdfeli
 
 http://www.rleonardi.com/interactive-resume/
 https://beautifier.io/
+
+
+
+https://nomadcoders.co/react-for-beginners/lectures/521?wvideo=i6v0pg3yee
