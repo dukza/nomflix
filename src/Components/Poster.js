@@ -17,7 +17,6 @@ const Rating = styled.div`
     bottom:8px;
     opacity:0;
     transition:   0.2s ease-in-out;
-
 `;
 
 const Container = styled.div`
@@ -32,11 +31,6 @@ const Container = styled.div`
         }
     }
 `;
-
-
-  
-
-
 
 const Title = styled.div`
     line-height:1.5;

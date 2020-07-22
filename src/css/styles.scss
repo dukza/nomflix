@@ -997,7 +997,6 @@ $list-padding-left:1.8rem;
 }
 
 #page{
-	padding: $spacer4;
 	.page{
 		&-title{
 			color: white;
@@ -1005,7 +1004,10 @@ $list-padding-left:1.8rem;
 		}		
 	}
 }
-
+body,html,#root{
+	height:100%;	
+}
 #root{
+
 	width: 100%;
 }

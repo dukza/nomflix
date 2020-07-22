@@ -4,13 +4,14 @@ import Section from 'Components/Section';
 import Loader from 'Components/Loader';
 import Message from 'Components/Message';
 import Poster from 'Components/Poster';
+import styled from 'styled-components';
 
 const HomePresenter = ({nowPlaying,upcoming,popular,error,loading}) =>
 loading ? <Loader/> : 
 (
     <>
       {nowPlaying && nowPlaying.length > 0 && (
-        <Section title="Now Playing">
+        <Section className="m-2" title="Now Playing">
           {nowPlaying.map(movie => 
           (<Poster
             key={movie.id}

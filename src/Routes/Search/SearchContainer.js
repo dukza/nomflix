@@ -22,14 +22,14 @@ export default class extends React.Component {
         }
       };
     
-      updateTerm = event => {
-        const {
-          target: { value }
-        } = event;
-        this.setState({
-          searchTerm: value
-        });
-      };
+    updateTerm = event => {
+    const {
+        target: { value }
+    } = event;
+    this.setState({
+        searchTerm: value
+    });
+    };
     searchByTerm = async() => {
         const {searchTerm} = this.state;
         try{

@@ -23,13 +23,14 @@ export default class extends React.Component {
         }
         let result = null;
         try {
-
             if (isMovie) {
                 ({ data: result } = await moviesApi.movieDetail(parseIntId))
             } else {
                 ({ data: result } = await tvApi.showDetail(parseIntId))
             }
-            console.log(result)
+            this.setState({
+                result
+            })
         } catch{
             this.setState({
                 error: "Can't not find result"
@@ -44,7 +45,6 @@ export default class extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         const { result, error, loading } = this.state;
         return (
             <DetailPresenter result={result} error={error} loading={loading} />

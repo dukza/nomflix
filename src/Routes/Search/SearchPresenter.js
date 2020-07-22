@@ -19,7 +19,7 @@ const Input = styled.input`
 
 const SearchPresenter = ({movieResults,tvResults,searchTerm,error,loading,handleSubmit,updateTerm}) => (
     <>
-        <Form onSubmit={handleSubmit} className="mb-5">
+        <Form onSubmit={handleSubmit} className="p-4 mb-5">
             <Input type="text" placeholder="Search Movies or TV Shows..." 
             value={searchTerm} onChange={updateTerm}/>
         </Form>

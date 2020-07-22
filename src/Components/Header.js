@@ -6,6 +6,8 @@ import 'css/short.css';
 const NavTop = styled.div`
     height:52px;
     top:0px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    z-index:88;
 `;
 
 const NavItem = styled(Link)`
@@ -19,7 +21,7 @@ const NavItem = styled(Link)`
 export default withRouter(({location:{pathname}}) => (
     <header className="col-12">
         {/* {console.log(props)} */}
-        <NavTop className="row w-100 shadow align-items-center position-fixed"> 
+        <NavTop className="row w-100 shadow-lg align-items-center position-fixed"> 
             <NavItem current={pathname === "/"} className="col-auto" to="/">
                 Home
             </NavItem>

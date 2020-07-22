@@ -11,8 +11,8 @@ import Detail from 'Routes/Detail';
 import styled from 'styled-components';
 
 const RouteWrap = styled.div`
-    margin-top:52px;
-    padding:24px;
+    padding-top:52px;
+    height:calc(100%);
 `;
 
 // 주소로 콤포넌트를 부른다
