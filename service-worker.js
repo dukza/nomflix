@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nomflix/precache-manifest.8253503cf8802c9f5ec274788d9e1336.js"
+  "/nomflix/precache-manifest.34b2c85bf602f60099bc9f45096d0cc5.js"
 );
 
 self.addEventListener('message', (event) => {
